@@ -1,0 +1,177 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background: #eee;
+  
+  perspective: 1000px;
+  
+  transition: background 200ms;
+}
+
+
+.book {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  margin: 20px;
+  overflow: hidden;
+  
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2),
+              0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 2px;
+  transition: all 200ms;
+}
+
+.book:hover {
+  box-shadow: 0 0 8px rgba(0,0,0,0.3),
+              0 8px 16px rgba(0,0,0,0.15);
+}
+
+.book:active {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+/*  backface-visibility: hidden;*/
+/*  position: absolute;*/
+/*  top: calc(50vh - 200px);*/
+/*  left: calc(50vw - 166px);*/
+/*  z-index: 1;*/
+}
+
+.book > * {
+  transition: all 100ms;
+}
+.book:active > * {
+  opacity: 0;
+}
+
+/*
+.book.book--booked {
+  background: none;
+  border: 2px dashed #d4d4d4;
+  box-sizing: border-box;
+  box-shadow: none !important;
+}
+*/
+
+.book__cover {
+  position: relative;
+  border-bottom: 1px solid #eee;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.book__cover__image {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+/*
+.book.book--booked .book__cover__image {
+  opacity: 0.2
+}
+*/
+
+.book__cover__detail {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px;
+  bottom: -100%;
+  height: 100%;
+/*  overflow: auto;*/
+  
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  transition: bottom 150ms cubic-bezier(.57, .01, .59, .01);
+}
+
+.book__cover__detail::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, #000, transparent);
+  content: "";
+  height: 100px;
+  width: 100%;
+}
+
+.book:hover .book__cover__detail {
+  bottom: 0;
+  transition: bottom 200ms cubic-bezier(.27, .96, .29, .97);
+}
+
+.book__cover__detail__title {
+  font-weight: lighter;
+}
+
+.book__cover__detail__author {
+  font-weight: lighter;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+.book__cover__detail__summary {
+  font-size: 0.9em;
+  text-align: justify;
+}
+
+.book__actions {
+  text-align: right;
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+
+.book__actions__button {
+  display: inline-block;
+  text-transform: uppercase;
+  line-height: 48px;
+  padding: 0 8px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #42A5F5;
+  color: #4CAF50;
+  cursor: pointer;
+}
+
+.book__actions__button.book__actions__button--secondary {
+  color: #000;
+}
+
+.book__actions__button.book__actions__button--alternative {
+  color: #AB47BC;
+  color: #FF9800;
+}
+
+.book__actions_indicator {
+  transform: rotate(-90deg);
+  transform-origin: left;
+  
+  position: absolute;
+  height: 16px;
+  text-align: left;
+  background: #42A5F5;
+  background: #4CAF50;
+  border-radius: 8px;
+  line-height: 16px;
+  padding: 0 8px;
+  font-size: 0.8em;
+  color: transparent;
+  bottom: 8px;
+  left: 24px;
+  max-width: 0;
+  transition: all 300ms;
+  cursor: default;
+/*  box-shadow: 8px 0 16px #fff;*/
+}
+
+.book:hover .book__actions_indicator {
+  color: #fff;
+  max-width: 150px;
+}
+
+.book--booked .book__actions_indicator {
+  background: #AB47BC;
+  background: #FF9800;
+}

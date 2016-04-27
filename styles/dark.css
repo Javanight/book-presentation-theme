@@ -1,0 +1,23 @@
+body {
+  background: #444;
+}
+
+
+.book {
+  background: #222;
+  box-shadow: 0 0 4px rgba(0,0,0,0.4),
+              0 4px 8px rgba(0,0,0,0.2);
+}
+
+.book:hover {
+  box-shadow: 0 0 8px rgba(0,0,0,0.6),
+              0 8px 16px rgba(0,0,0,0.3);
+}
+
+.book__actions__button.book__actions__button--secondary {
+  color: #fff;
+}
+
+.book__cover {
+  border-bottom: 1px solid #333;
+}

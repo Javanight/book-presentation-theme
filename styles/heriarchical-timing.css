@@ -1,0 +1,36 @@
+.book {
+	transition: 200ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+	transform: translateY(30px);
+    opacity: 0;
+}
+
+body:hover > * {
+	transform: translateY(0);
+    opacity: 1;
+}
+
+body:hover > *:nth-child(1) {transition-delay: 0s}
+body:hover > *:nth-child(2) {transition-delay: .1s}
+body:hover > *:nth-child(3) {transition-delay: .15s}
+body:hover > *:nth-child(4) {transition-delay: .2s}
+body:hover > *:nth-child(5) {transition-delay: .25s}
+body:hover > *:nth-child(6) {transition-delay: .3s}
+body:hover > *:nth-child(7) {transition-delay: .35s}
+body:hover > *:nth-child(8) {transition-delay: .4s}
+body:hover > *:nth-child(9) {transition-delay: .45s}
+body:hover > *:nth-child(10) {transition-delay: .5s}
+body:hover > *:nth-child(11) {transition-delay: .55s}
+body:hover > *:nth-child(12) {transition-delay: .6s}
+
+body > *:nth-child(12) {transition-delay: 0s}
+body > *:nth-child(11) {transition-delay: .1s}
+body > *:nth-child(10) {transition-delay: .15s}
+body > *:nth-child(9) {transition-delay: .2s}
+body > *:nth-child(8) {transition-delay: .25s}
+body > *:nth-child(7) {transition-delay: .3s}
+body > *:nth-child(6) {transition-delay: .35s}
+body > *:nth-child(5) {transition-delay: .4s}
+body > *:nth-child(4) {transition-delay: .45s}
+body > *:nth-child(3) {transition-delay: .5s}
+body > *:nth-child(2) {transition-delay: .55s}
+body > *:nth-child(1) {transition-delay: .6s}

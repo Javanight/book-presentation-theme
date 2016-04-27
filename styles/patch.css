@@ -1,0 +1,13 @@
+.book {
+  height: 450px;
+}
+
+.book__cover { 
+  max-height: 402px;
+}
+
+.book__actions {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
